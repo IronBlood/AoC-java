@@ -38,7 +38,7 @@ public class Main {
 
 			method.invoke(null, input.trim());
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -88,7 +88,7 @@ public class Main {
 					""".formatted(d.year, d.date);
 			create_file(file_path, content);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
