@@ -48,7 +48,7 @@ public class SolutionTest {
 	}
 
 	@ParameterizedTest
-	@MethodSource("part1_cases")
+	@MethodSource("part2_cases")
 	void count_decompressed_length_2_test(TestCase tc) {
 		assertEquals(tc.expected, Solution.count_decompressed_length_2(tc.input));
 	}
