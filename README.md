@@ -12,13 +12,16 @@ This project contains Java translations of my [Advent of Code solutions in JavaS
 
 ```bash
 # Scaffold files for a specific day
-mvn -q exec:java -Dexec.mainClass="Main" -Dexec.args="2016-01 s"
+mvn -q exec:java -DskipTests -Dexec.mainClass="Main" -Dexec.args="2016-01 s"
 
 # Run unit tests for a specific day
 mvn test -Dtest=y2016.d01.SolutionTest
 
+# Run unit all unit tests without MD5 hashing related
+SKIP_MD5=1 mvn test
+
 # Run a solution
-mvn -q exec:java -Dexec.mainClass="Main" -Dexec.args="2016-01"
+mvn -q exec:java -DskipTests -Dexec.mainClass="Main" -Dexec.args="2016-01"
 ```
 
 ## License
